@@ -1,0 +1,18 @@
+.movieCard {
+  list-style: none;
+  font-size: 1.5rem;
+  text-align: center;
+  background-color: #383838;
+  border-radius: 8px;
+  overflow: hidden; /* Garante que a imagem não "vaze" das bordas arredondadas */
+}
+
+.movieCard img {
+  width: 100%;
+  height: auto;
+  display: block; /* Remove espaço extra abaixo da imagem */
+}
+
+.movieInfo {
+    padding: 1rem;
+}
