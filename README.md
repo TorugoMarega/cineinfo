@@ -1,69 +1,87 @@
-# React + TypeScript + Vite
+# 🎬 CineInfo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Status do Projeto](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)
+![Licença](https://img.shields.io/badge/license-MIT-blue)
 
-Currently, two official plugins are available:
+Uma aplicação web moderna e responsiva para descobrir, explorar e organizar seus filmes favoritos. Este projeto foi construído do zero como um exercício prático para dominar os fundamentos e conceitos avançados do ecossistema React, partindo de uma base simples para uma aplicação completa.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## Expanding the ESLint configuration
+O "CineInfo" está em constante evolução. Aqui está o roadmap de funcionalidades:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+#### Implementadas
+- [x] **Navegação de Filmes Populares:** Visualização em grid dos filmes mais populares do momento.
+- [x] **Páginas de Detalhes:** Rota dinâmica para cada filme, exibindo informações detalhadas.
+- [x] **Sistema de Favoritos:** Adicione e remova filmes de uma lista de favoritos persistente no navegador.
+- [x] **Design Responsivo:** Interface adaptável para diferentes tamanhos de tela.
+- [x] **Tema Visual Moderno:** Tema escuro "cinema" com estilização profissional e coesa.
+- [x] **Boas Práticas de Segurança:** Chaves de API gerenciadas através de variáveis de ambiente.
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+#### Planejadas
+- [ ] **Busca Avançada:** Campo de busca com "debouncing" para pesquisar filmes por nome.
+- [ ] **Filtros e Ordenação:** Filtrar filmes por gênero, ano, e ordenar por popularidade ou nota.
+- [ ] **Paginação:** Carregar mais resultados de filmes.
+- [ ] **Autenticação de Usuários:** Sistema de Login/Cadastro para salvar favoritos na nuvem.
+- [ ] **Data Fetching Otimizado:** Migração para TanStack Query para caching e performance.
+- [ ] **Notificações "Toast":** Feedbacks visuais para ações do usuário.
+- [ ] **Backend e Banco de Dados:** API própria para gerenciar dados de usuários e listas.
+- [ ] **Deploy:** Publicação da aplicação na web.
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🛠️ Tecnologias e Ferramentas
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Este projeto foi construído utilizando as seguintes tecnologias:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+* **React:** Biblioteca principal para a construção da interface.
+* **TypeScript:** Para um código mais seguro, escalável e com melhor autocompletar.
+* **Vite:** Ferramenta de build extremamente rápida para o ambiente de desenvolvimento.
+* **React Router:** Para gerenciamento de rotas e navegação (SPA).
+* **Context API:** Para gerenciamento de estado global (sistema de favoritos).
+* **CSS Modules:** Para estilização componentizada e livre de conflitos.
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
+
+## 🚀 Como Executar o Projeto Localmente
+
+Siga os passos abaixo para rodar o CineInfo na sua máquina.
+
+**Pré-requisitos:**
+* [Node.js](https://nodejs.org/en/) (versão LTS recomendada)
+* [npm](https://www.npmjs.com/) ou [yarn](https://yarnpkg.com/)
+
+**Passos:**
+
+1.  **Clone o repositório:**
+    ```bash
+    git clone [https://github.com/TorugoMarega/cineinfo.git](https://github.com/TorugoMarega/cineinfo.git)
+    cd cineinfo
+    ```
+
+2.  **Instale as dependências:**
+    ```bash
+    npm install
+    ```
+
+3.  **Configure as variáveis de ambiente:**
+    * Crie um arquivo chamado `.env.local` na raiz do projeto.
+    * Adicione as seguintes variáveis, substituindo os valores pelos seus:
+      ```env
+      # .env.local - Exemplo
+      VITE_API_URL=[https://api.themoviedb.org/3](https://api.themoviedb.org/3)
+      VITE_API_KEY=SUA_CHAVE_SECRETA_DA_API_AQUI
+      ```
+    * Você pode obter uma chave de API gratuitamente no site do [The Movie Database (TMDB)](https://www.themoviedb.org/documentation/api).
+
+4.  **Inicie o servidor de desenvolvimento:**
+    ```bash
+    npm run dev
+    ```
+
+5.  Abra seu navegador e acesse `http://localhost:5173` (ou a porta indicada no seu terminal).
+
+---
+
+## 📄 Licença
+
+Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalhes.
