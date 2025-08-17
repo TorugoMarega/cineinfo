@@ -6,7 +6,7 @@
 Uma aplicação web moderna e responsiva para descobrir, explorar e organizar seus filmes favoritos. Este projeto foi construído do zero como um exercício prático para dominar os fundamentos e conceitos avançados do ecossistema React, partindo de uma base simples para uma aplicação completa.
 
 ## CineInfo
-![Print HomePage Cineinfo](../cineinfo/public/print_cineinfo.png)
+![Print HomePage Cineinfo](/public/print_cineinfo.png)
 
 ## ✨ Features
 
