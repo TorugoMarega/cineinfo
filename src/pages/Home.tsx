@@ -17,7 +17,7 @@ function Home() {
       const apiLanguage = `language=pt-BR`
       const url = `${apiUrl}${endpoint}?${apiKey}&${apiLanguage}` 
 
-      console.log("Chamando API de filmes na URL: ", url)
+      //console.log("Chamando API de filmes na URL: ", url)
 
       const response = await fetch(url);
       if(!response.ok){
@@ -50,7 +50,7 @@ function Home() {
       <ul className={styles.moviesGrid}>
         {movies.map((movie) => (
           <MovieCard
-            key={movie.id} // A prop 'key' é essencial para o React!
+            key={movie.id}
             id={movie.id}
             title={movie.title}
             poster_path={movie.poster_path}

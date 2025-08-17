@@ -1,13 +1,53 @@
-.title {
-    text-align: center;
-    font-size: 3rem;
-    margin-bottom: 2rem;
+.appContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.header {
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo a {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.nav a {
+  margin-left: 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  transition: color 0.2s ease-in-out;
+}
+
+.nav a:hover {
+  color: var(--color-text-primary);
+}
+
+.pageTitle {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
 }
 
 .moviesGrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
-    gap: 20px;
-    padding: 0;
-    margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Estilos para estados de Loading e Erro */
+.centeredMessage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  font-size: 1.5rem;
+  color: var(--color-text-secondary);
 }
