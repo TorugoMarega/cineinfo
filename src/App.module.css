@@ -51,3 +51,25 @@
   font-size: 1.5rem;
   color: var(--color-text-secondary);
 }
+
+/* Media query para telas menores, como tablets e celulares */
+@media (max-width: 768px) {
+  .appContainer {
+    padding: 1.5rem;
+  }
+
+  /* Empilha o logo e a navegação em vez de deixar lado a lado */
+  .header {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .nav a {
+    margin: 0 0.75rem;
+  }
+
+  .pageTitle {
+    font-size: 2rem;
+  }
+}

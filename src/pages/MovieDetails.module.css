@@ -42,3 +42,36 @@
   color: var(--color-text-primary);
   text-decoration: underline;
 }
+
+/* Ajustes para telas com 768px de largura ou menos */
+@media (max-width: 768px) {
+  .detailsContainer {
+    /* Desmonta o grid de 2 colunas e cria um de 1 coluna */
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .poster img {
+    max-width: 250px;
+    margin: 0 auto; /* Centraliza o poster que ficou menor */
+  }
+
+  /* Centraliza as infos do filme */
+  .info h1 {
+    text-align: center;
+    font-size: var(--font-size-h1);
+  }
+  
+  .info p, .info h3 {
+    text-align: center;
+  }
+
+  /* Um detalhe visual para os subtítulos */
+  .info h3 {
+    border-left: none;
+    padding-left: 0;
+    border-bottom: 2px solid var(--color-primary);
+    display: inline-block;
+    margin-bottom: 1rem;
+  }
+}
